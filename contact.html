@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Carrying It All Podcast | Collaborations &amp; Sponsorships</title>
+  <meta name="description" content="Get in touch with Carrying It All for brand collaborations, sponsorship inquiries, or guest pitches.">
+  <meta property="og:title" content="Contact — Carrying It All Podcast | Collaborations &amp; Sponsorships">
+  <meta property="og:description" content="Get in touch with Carrying It All for brand collaborations, sponsorship inquiries, or guest pitches.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carryingitallmama.com/contact.html">
+  <meta property="og:image" content="https://carryingitallmama.com/images/og-image.jpg">
+  <link rel="canonical" href="https://carryingitallmama.com/contact.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- STRUCTURED DATA — Contact page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://carryingitallmama.com/contact.html#webpage",
+        "url": "https://carryingitallmama.com/contact.html",
+        "name": "Contact — Carrying It All Podcast | Collaborations & Sponsorships",
+        "description": "Get in touch with Carrying It All for brand collaborations, sponsorship inquiries, or guest pitches.",
+        "isPartOf": { "@id": "https://carryingitallmama.com/#website" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carryingitallmama.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://carryingitallmama.com/contact.html" }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
+  <style>
+    .contact-section {
+      background: var(--warm-white);
+      padding: var(--section-pad);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-info { position: sticky; top: 100px; }
+    .contact-info p { color: var(--muted); margin-bottom: 32px; line-height: 1.8; }
+
+    .contact-ways { display: flex; flex-direction: column; gap: 12px; }
+    .contact-way {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--blush);
+      border: 1px solid var(--blush-deep);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      font-size: 0.88rem;
+      color: var(--bark);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .contact-way:hover { border-color: var(--light-purple); background: var(--cream); }
+    .contact-way-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .contact-way-label { font-size: 0.72rem; color: var(--muted); display: block; margin-bottom: 2px; }
+    .contact-way-value { font-weight: 500; color: var(--plum); }
+
+    .inquiry-types {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 28px 0;
+    }
+    .inquiry-tag {
+      background: var(--blush);
+      border: 1px solid var(--blush-deep);
+      border-radius: 50px;
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--plum);
+    }
+
+    /* Contact Form */
+    .contact-form-wrap {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+    .contact-form-wrap h3 { margin-bottom: 8px; }
+    .contact-form-wrap > p { color: var(--muted); font-size: 0.88rem; margin-bottom: 28px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group select option { color: var(--bark); }
+
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      font-size: 0.9rem;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .form-success-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+    .form-success h3 { margin-bottom: 8px; }
+    .form-success p { color: var(--muted); }
+
+    .response-note {
+      background: var(--blush);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-info { position: static; }
+    }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Carrying <span>It All</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="listen.html">Listen</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="listen.html" class="btn btn-primary nav-cta">Listen Now</a>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="episodes.html">Episodes</a>
+  <a href="listen.html">Listen</a>
+  <a href="community.html">Community</a>
+  <a href="contact.html">Contact</a>
+  <a href="listen.html" class="btn btn-primary" style="text-align:center;margin-top:8px;">Listen Now</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Get in Touch</span>
+    <h1>Let's Work Together</h1>
+    <p>Brand collaborations, sponsorships, and guest pitches welcome.</p>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- LEFT: Info -->
+      <div class="contact-info reveal">
+        <span class="eyebrow">Open For</span>
+        <h2>How to Reach Us</h2>
+        <p>
+          We love connecting with brands that genuinely align with our audience — real mamas in every season of motherhood. We're open to sponsorships, brand partnerships, affiliate collaborations, and thoughtful guest pitches.
+        </p>
+
+        <div class="inquiry-types" aria-label="Types of inquiries accepted">
+          <span class="inquiry-tag">Brand Collaborations</span>
+          <span class="inquiry-tag">Podcast Sponsorships</span>
+          <span class="inquiry-tag">Guest Pitches</span>
+          <span class="inquiry-tag">Media Inquiries</span>
+          <span class="inquiry-tag">General Questions</span>
+        </div>
+
+        <div class="contact-ways" role="list">
+          <a href="mailto:hello@carryingitallmama.com" class="contact-way" role="listitem" aria-label="Send us an email">
+            <span class="contact-way-icon">📧</span>
+            <div>
+              <span class="contact-way-label">Email</span>
+              <span class="contact-way-value">hello@carryingitallmama.com</span>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/carryingitall.mama" target="_blank" rel="noopener" class="contact-way" role="listitem" aria-label="Message us on Instagram">
+            <span class="contact-way-icon">📷</span>
+            <div>
+              <span class="contact-way-label">Instagram DM</span>
+              <span class="contact-way-value">@carryingitall.mama</span>
+            </div>
+          </a>
+          <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener" class="contact-way" role="listitem" aria-label="Follow us on TikTok">
+            <span class="contact-way-icon">🎵</span>
+            <div>
+              <span class="contact-way-label">TikTok</span>
+              <span class="contact-way-value">@carryingitallmama</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="reveal reveal-delay-2">
+        <div class="contact-form-wrap">
+          <h3>Send a Message</h3>
+          <p>Fill in the form below and we'll get back to you within 2–3 business days.</p>
+
+          <!-- Netlify Forms: data-netlify="true" handles delivery to your email automatically when hosted on Netlify -->
+          <form
+            id="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            aria-label="Contact form"
+          >
+            <!-- Honeypot field (spam prevention) -->
+            <p style="display:none;">
+              <label>Don't fill this out: <input name="bot-field"></label>
+            </p>
+            <input type="hidden" name="form-name" value="contact">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Your Name *</label>
+                <input type="text" id="contact-name" name="name" placeholder="Jane Smith" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" name="email" placeholder="jane@example.com" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-company">Company / Brand (optional)</label>
+              <input type="text" id="contact-company" name="company" placeholder="Your company name" autocomplete="organization">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-type">Inquiry Type *</label>
+              <select id="contact-type" name="inquiry_type" required>
+                <option value="" disabled selected>Select the type of inquiry…</option>
+                <option value="Brand Collaboration">Brand Collaboration</option>
+                <option value="Podcast Sponsorship">Podcast Sponsorship</option>
+                <option value="Guest Pitch">Guest Pitch</option>
+                <option value="Media Inquiry">Media Inquiry</option>
+                <option value="General Question">General Question</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" name="message" placeholder="Tell us about your collaboration idea, pitch, or question…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">Send Message →</button>
+
+            <div class="response-note">
+              <span>🕐</span>
+              We aim to respond within 2–3 business days. For urgent matters, DM us on Instagram.
+            </div>
+          </form>
+
+          <!-- Success State (shown after submission) -->
+          <div class="form-success" id="form-success" role="status" aria-live="polite">
+            <span class="form-success-icon">✉️</span>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. We'll be in touch within 2–3 business days.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">Carrying <span>It All</span></div>
+      <p>The honest podcast for every season of motherhood.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/carryingitall.mama" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+        <a href="listen.html" aria-label="Podcast">🎙</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="listen.html">Listen</a>
+      <a href="community.html">Community</a>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/carryingitall.mama" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener">TikTok</a>
+      <a href="mailto:hello@carryingitallmama.com">hello@carryingitallmama.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Carrying It All. All rights reserved.</span>
+    <span>carryingitallmama.com</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Handle Netlify form submission response (when Netlify redirects back)
+  if (window.location.search.includes('success=true') || window.location.hash === '#success') {
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+
+  // Fallback: JS submission for non-Netlify environments
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function(e) {
+    // If hosted on Netlify, let the form submit normally (data-netlify handles it)
+    // Only intercept if NOT on Netlify (for local testing)
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      e.preventDefault();
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+    // On Netlify: native form POST to Netlify Forms — no JS needed
+  });
+</script>
+</body>
+</html>

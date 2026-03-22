@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://carryingitallmama.com/sitemap.xml
