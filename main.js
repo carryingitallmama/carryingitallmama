@@ -72,7 +72,7 @@ const PODCAST_RSS = {
   apple:   '',   // her Apple Podcasts RSS feed URL goes here
   // Most podcast hosts (Buzzsprout, Anchor, Podbean etc.) provide a direct RSS URL
   // This is the MAIN RSS to use:
-  main:    ''    // e.g. https://feeds.buzzsprout.com/XXXXXX.rss
+  main:    'https://anchor.fm/s/110a832c8/podcast/rss'
 };
 
 /**
