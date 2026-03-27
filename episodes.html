@@ -192,7 +192,20 @@
     </div>
 
     <div id="all-episodes" aria-live="polite" aria-label="All podcast episodes">
-      <div class="loading-state"><div class="spinner"></div><p>Loading all episodes…</p></div>
+      <article class="episode-card reveal visible">
+        <div class="episode-thumb">
+          <span>🎙</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-num">Episode 1 · 30 min 52 sec</div>
+          <h3 class="episode-title">Why I'm Here: The story behind Carrying it All Mama</h3>
+          <p class="episode-desc">In the very first episode of Carrying It All Mama, I'm telling you exactly why I started this show. The losses. The sleepless nights. The moment I realized someone needed to say this out loud. If you've ever felt completely alone in the hard parts of motherhood — hi. You found your people.</p>
+          <div class="episode-meta">
+            <span class="episode-date">📅 March 27, 2026</span>
+          </div>
+        </div>
+        <a href="https://open.spotify.com/episode/17OZVLKWfbS1VKJbv4jJGF" target="_blank" rel="noopener" class="episode-play" aria-label="Listen on Spotify">▶</a>
+      </article>
     </div>
 
     <div id="no-results" style="display:none;" class="error-state" role="status">
@@ -236,7 +249,7 @@
       <a href="contact.html">Contact</a>
       <a href="https://www.instagram.com/carryingitall.mama" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener">TikTok</a>
-      <a href="mailto:hello@carryingitallmama.com">hello@carryingitallmama.com</a>
+      <a href="/cdn-cgi/l/email-protection#9ef6fbf2f2f1defdffecece7f7f0f9f7eafff2f2f3fff3ffb0fdf1f3"><span class="__cf_email__" data-cfemail="8de5e8e1e1e2cdeeecfffff4e4e3eae4f9ece1e1e0ece0eca3eee2e0">[email&#160;protected]</span></a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -245,7 +258,7 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -313,13 +326,4 @@
       if (!q) { renderEpisodeList(allEpisodesData); document.getElementById('episode-count').textContent = `${allEpisodesData.length} episode${allEpisodesData.length !== 1 ? 's' : ''}`; return; }
       const filtered = allEpisodesData.filter(ep =>
         ep.title.toLowerCase().includes(q) || ep.desc.toLowerCase().includes(q)
-      );
-      renderEpisodeList(filtered);
-      document.getElementById('episode-count').textContent = `${filtered.length} result${filtered.length !== 1 ? 's' : ''} for "${this.value.trim()}"`;
-    }, 300);
-  });
-
-  loadAllEpisodes();
-</script>
-</body>
-</html>
+    
