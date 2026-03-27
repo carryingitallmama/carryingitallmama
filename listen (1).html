@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listen — Carrying It All Mama Podcast | Apple, Spotify &amp; More</title>
+  <meta name="description" content="Find Carrying It All on Apple Podcasts, Spotify, Amazon Music, iHeart Radio and YouTube. New episodes every week.">
+  <meta property="og:title" content="Listen — Carrying It All Mama Podcast | Apple, Spotify &amp; More">
+  <meta property="og:description" content="Find Carrying It All on Apple Podcasts, Spotify, Amazon Music, iHeart Radio and YouTube.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carryingitallmama.com/listen.html">
+  <meta property="og:image" content="https://carryingitallmama.com/images/og-image.jpg">
+  <link rel="canonical" href="https://carryingitallmama.com/listen.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- STRUCTURED DATA — Listen page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://carryingitallmama.com/listen.html#webpage",
+        "url": "https://carryingitallmama.com/listen.html",
+        "name": "Listen — Carrying It All Podcast | Apple, Spotify & More",
+        "description": "Find Carrying It All on Apple Podcasts, Spotify, Amazon Music, iHeart Radio and YouTube. New episodes every week.",
+        "isPartOf": { "@id": "https://carryingitallmama.com/#website" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carryingitallmama.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Listen", "item": "https://carryingitallmama.com/listen.html" }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
+  <style>
+    .listen-hero {
+      background: linear-gradient(150deg, var(--plum) 0%, var(--mid-purple) 100%);
+      padding: 140px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .listen-hero::before {
+      content:'';
+      position:absolute; inset:0;
+      background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(149,117,205,0.25) 0%, transparent 70%);
+    }
+    .listen-hero .container { position: relative; }
+    .listen-hero .eyebrow { color: var(--blush-deep); justify-content: center; }
+    .listen-hero h1 { color: #fff; margin-bottom: 16px; }
+    .listen-hero p { color: rgba(255,255,255,0.75); max-width: 500px; margin: 0 auto; }
+
+    .platforms-section {
+      background: var(--warm-white);
+      padding: var(--section-pad);
+    }
+
+    .platform-category { margin-bottom: 56px; }
+    .platform-category h3 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--blush-deep);
+    }
+
+    .platform-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .platform-btn-large {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 22px 24px;
+      background: var(--warm-white);
+      border: 1.5px solid var(--blush-deep);
+      border-radius: var(--radius-lg);
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: var(--bark);
+    }
+    .platform-btn-large:hover {
+      border-color: var(--light-purple);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .platform-icon-lg {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .platform-btn-text { flex: 1; }
+    .platform-btn-name {
+      font-weight: 600;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .platform-btn-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .platform-arrow {
+      color: var(--muted);
+      font-size: 0.85rem;
+      transition: transform 0.2s;
+    }
+    .platform-btn-large:hover .platform-arrow { transform: translateX(4px); color: var(--plum); }
+
+    /* Pending badge */
+    .platform-pending {
+      opacity: 0.55;
+      pointer-events: none;
+      cursor: default;
+    }
+    .platform-badge {
+      font-size: 0.65rem;
+      background: var(--blush-deep);
+      color: var(--plum);
+      padding: 2px 8px;
+      border-radius: 50px;
+      font-weight: 500;
+      margin-left: auto;
+      margin-right: 8px;
+    }
+
+    .review-cta {
+      background: var(--blush);
+      border: 1px solid var(--blush-deep);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-top: 48px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .review-cta-text { flex: 1; }
+    .review-cta-text h3 { margin-bottom: 8px; }
+    .review-cta-text p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+    .review-cta .btn { flex-shrink: 0; }
+
+    @media (max-width: 700px) {
+      .review-cta { flex-direction: column; text-align: center; }
+      .review-cta .btn { width: 100%; text-align: center; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Carrying It All <span>Mama</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="listen.html">Listen</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="listen.html" class="btn btn-primary nav-cta">Listen Now</a>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="episodes.html">Episodes</a>
+  <a href="listen.html">Listen</a>
+  <a href="community.html">Community</a>
+  <a href="contact.html">Contact</a>
+  <a href="listen.html" class="btn btn-primary" style="text-align:center;margin-top:8px;">Listen Now</a>
+</div>
+
+<div class="listen-hero" role="banner">
+  <div class="container">
+    <span class="eyebrow">Find Us Everywhere</span>
+    <h1>Listen on Every Platform</h1>
+    <p>Available on all major podcast apps. Subscribe once and every new episode arrives automatically.</p>
+  </div>
+</div>
+
+<section class="platforms-section">
+  <div class="container" style="max-width: 860px;">
+
+    <div class="platform-category reveal visible">
+      <h3>Listen to the Podcast</h3>
+      <div class="platform-list">
+
+        <a href="#" class="platform-btn-large" target="_blank" rel="noopener" aria-label="Listen on Apple Podcasts">
+          <div class="platform-icon-lg" style="background:#f2f2f2; display:flex; align-items:center; justify-content:center;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="28" height="28" rx="7" fill="#d56bff"/>
+              <path d="M14 4C8.477 4 4 8.477 4 14s4.477 10 10 10 10-4.477 10-10S19.523 4 14 4zm0 4a6 6 0 110 12A6 6 0 0114 8zm0 2a4 4 0 100 8 4 4 0 000-8zm0 1.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zm0 1a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" fill="white"/>
+              <circle cx="14" cy="14" r="2" fill="white"/>
+              <path d="M12 19.5c0-.828.5-1.5 2-1.5s2 .672 2 1.5v1c0 .276-.224.5-.5.5h-3c-.276 0-.5-.224-.5-.5v-1z" fill="white"/>
+            </svg>
+          </div>
+          <div class="platform-btn-text">
+            <span class="platform-btn-name">Apple Podcasts</span>
+            <span class="platform-btn-sub">Subscribe &amp; leave a review</span>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+        <a href="https://open.spotify.com/show/4IlUriqji687MBaxvlhm" class="platform-btn-large" target="_blank" rel="noopener" aria-label="Listen on Spotify">
+          <div class="platform-icon-lg" style="background:#1db954; display:flex; align-items:center; justify-content:center;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2C7.373 2 2 7.373 2 14s5.373 12 12 12 12-5.373 12-12S20.627 2 14 2zm5.49 17.31a.748.748 0 01-1.03.25c-2.82-1.724-6.369-2.114-10.549-1.158a.748.748 0 01-.332-1.459c4.573-1.045 8.49-.595 11.661 1.337a.748.748 0 01.25 1.03zm1.466-3.261a.936.936 0 01-1.288.308c-3.226-1.983-8.143-2.559-11.958-1.4a.937.937 0 01-.543-1.79c4.358-1.322 9.776-.682 13.48 1.594a.936.936 0 01.309 1.288zm.126-3.396c-3.868-2.297-10.248-2.509-13.94-1.388a1.122 1.122 0 11-.651-2.147c4.242-1.287 11.294-1.039 15.748 1.607a1.123 1.123 0 01-1.157 1.928z" fill="white"/>
+            </svg>
+          </div>
+          <div class="platform-btn-text">
+            <span class="platform-btn-name">Spotify</span>
+            <span class="platform-btn-sub">Follow the show</span>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="platform-category reveal reveal-delay-1 visible">
+      <h3>Follow on Social Media</h3>
+      <div class="platform-list">
+
+        <a href="https://www.instagram.com/carryingitall.mama" class="platform-btn-large" target="_blank" rel="noopener" aria-label="Follow on Instagram">
+          <div class="platform-icon-lg" style="background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); display:flex; align-items:center; justify-content:center;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="white" stroke-width="2" fill="none"/>
+              <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="2" fill="none"/>
+              <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
+            </svg>
+          </div>
+          <div class="platform-btn-text">
+            <span class="platform-btn-name">Instagram</span>
+            <span class="platform-btn-sub">@carryingitall.mama</span>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@carryingitallmama" class="platform-btn-large" target="_blank" rel="noopener" aria-label="Follow on TikTok">
+          <div class="platform-icon-lg" style="background:#010101; display:flex; align-items:center; justify-content:center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/>
+            </svg>
+          </div>
+          <div class="platform-btn-text">
+            <span class="platform-btn-name">TikTok</span>
+            <span class="platform-btn-sub">@carryingitallmama</span>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+        <a href="https://www.facebook.com" class="platform-btn-large" target="_blank" rel="noopener" aria-label="Follow on Facebook">
+          <div class="platform-icon-lg" style="background:#1877f2; display:flex; align-items:center; justify-content:center;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+            </svg>
+          </div>
+          <div class="platform-btn-text">
+            <span class="platform-btn-name">Facebook</span>
+            <span class="platform-btn-sub">Follow our page</span>
+          </div>
+          <span class="platform-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Leave a Review CTA -->
+    <div class="review-cta reveal reveal-delay-2 visible">
+      <div class="review-cta-text">
+        <h3>Enjoying the Show?</h3>
+        <p>Leaving a 5-star review on Apple Podcasts takes 30 seconds and helps other mamas find us. It means the world.</p>
+      </div>
+      <a href="#" target="_blank" rel="noopener" class="btn btn-primary">Leave a Review ★</a>
+    </div>
+
+  </div>
+</section>
+
+<section style="background: linear-gradient(135deg, var(--plum), var(--mid-purple)); padding: 80px 24px; text-align: center;">
+  <div class="container" style="max-width: 500px; position: relative;">
+    <span class="eyebrow reveal" style="color: var(--blush-deep); justify-content: center;">Join the Community</span>
+    <h2 class="reveal reveal-delay-1" style="color: #fff; margin-bottom: 12px;">Get the Free Journal Prompts</h2>
+    <p class="reveal reveal-delay-2" style="color: rgba(255,255,255,0.7); margin-bottom: 28px;">Subscribe to get your free Honest Pregnancy Journal Prompts download — and never miss an episode.</p>
+    <div class="reveal reveal-delay-3">
+      <a href="community.html" class="btn" style="background: var(--gold); color: var(--bark); font-weight: 600;">Join the Community →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">Carrying It All <span>Mama</span></div>
+      <p>Carrying It All Mama — The honest podcast for every season of motherhood.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/carryingitall.mama" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+        <a href="listen.html" aria-label="Podcast">🎙</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="listen.html">Listen</a>
+      <a href="community.html">Community</a>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/carryingitall.mama" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener">TikTok</a>
+      <a href="/cdn-cgi/l/email-protection#dbb3beb7b7b49bb8baa9a9a2b2b5bcb2afbab7b7b6bab6baf5b8b4b6"><span class="__cf_email__" data-cfemail="066e636a6a6946656774747f6f68616f72676a6a6b676b672865696b">[email&#160;protected]</span></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Carrying It All Mama. All rights reserved.</span>
+    <span>carryingitallmama.com</span>
+  </di
