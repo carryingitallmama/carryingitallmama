@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrying It All Mama — Honest Pregnancy &amp; Motherhood Podcast</title>
+  <meta name="description" content="Carrying It All Mama — The honest podcast for every season of motherhood. Real pregnancy emotions, natural birth, relationships &amp; mental health. New episodes weekly.">
+  <meta property="og:title" content="Carrying It All Mama — Honest Pregnancy &amp; Motherhood Podcast">
+  <meta property="og:description" content="Carrying It All Mama — The honest podcast for every season of motherhood. Real pregnancy emotions, natural birth, relationships &amp; mental health.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carryingitallmama.com/">
+  <meta property="og:image" content="https://carryingitallmama.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://carryingitallmama.com/">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- STRUCTURED DATA — PodcastSeries + Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "PodcastSeries",
+        "@id": "https://carryingitallmama.com/#podcast",
+        "name": "Carrying It All",
+        "description": "Carrying It All Mama — The honest podcast for every season of motherhood. Real conversations about pregnancy emotions, natural birth, relationships, postpartum mental health, and what it means to carry it all.",
+        "url": "https://carryingitallmama.com/",
+        "image": "https://carryingitallmama.com/images/podcast-cover.jpg",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://carryingitallmama.com/#organization",
+          "name": "Carrying It All",
+          "url": "https://carryingitallmama.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://carryingitallmama.com/images/podcast-cover.jpg"
+          },
+          "sameAs": [
+            "https://www.instagram.com/carryingitallmama",
+            "https://www.tiktok.com/@carryingitallmama"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "hello@carryingitallmama.com",
+            "contactType": "customer support"
+          }
+        },
+        "webFeed": "https://carryingitallmama.com/feed.rss"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://carryingitallmama.com/#website",
+        "url": "https://carryingitallmama.com/",
+        "name": "Carrying It All Podcast",
+        "description": "Carrying It All Mama — The honest podcast for every season of motherhood.",
+        "publisher": {
+          "@id": "https://carryingitallmama.com/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://carryingitallmama.com/#webpage",
+        "url": "https://carryingitallmama.com/",
+        "name": "Carrying It All — Honest Pregnancy & Motherhood Podcast",
+        "description": "Carrying It All Mama — The honest podcast for every season of motherhood. Real pregnancy emotions, natural birth, relationships & mental health. New episodes weekly.",
+        "isPartOf": { "@id": "https://carryingitallmama.com/#website" },
+        "about": { "@id": "https://carryingitallmama.com/#podcast" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carryingitallmama.com/" }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics — replace GA_MEASUREMENT_ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  <style>
+    /* ---- HOME-SPECIFIC STYLES ---- */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(150deg, var(--plum) 0%, #3a1f55 40%, var(--mid-purple) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 24px 80px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(149,117,205,0.25) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(201,168,76,0.08) 0%, transparent 50%);
+    }
+    /* Decorative orbs */
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .hero-orb-1 { width: 500px; height: 500px; background: var(--light-purple); top: -100px; right: -100px; }
+    .hero-orb-2 { width: 300px; height: 300px; background: var(--gold); bottom: -50px; left: -50px; }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+    }
+    .hero-content { max-width: 620px; }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50px;
+      padding: 6px 16px 6px 10px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+      line-height: 1.08;
+      margin-bottom: 12px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--blush-deep);
+      font-weight: 400;
+    }
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 36px;
+      max-width: 460px;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+    }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    /* Floating cover card */
+    .hero-card {
+      width: 240px;
+      flex-shrink: 0;
+      animation: float 5s ease-in-out infinite;
+    }
+    .hero-cover {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 24px;
+      background: linear-gradient(145deg, var(--blush) 0%, var(--blush-deep) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.35), 0 8px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+    .cover-placeholder {
+      text-align: center;
+      padding: 24px;
+    }
+    .cover-placeholder-icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .cover-placeholder-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--plum);
+      line-height: 1.2;
+    }
+    .cover-placeholder-sub {
+      font-size: 0.72rem;
+      color: var(--light-purple);
+      margin-top: 6px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .hero-card-badge {
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      border-radius: 50px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-lg);
+      white-space: nowrap;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--bark);
+    }
+    .new-dot {
+      width: 8px; height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s ease infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.85); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(-1deg); }
+      50% { transform: translateY(-16px) rotate(1deg); }
+    }
+
+    /* --- ABOUT STRIP --- */
+    .about-strip {
+      background: var(--cream);
+      padding: var(--section-pad);
+    }
+    .about-strip-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-photo {
+      position: relative;
+    }
+    .about-photo-frame {
+      aspect-ratio: 3/4;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, var(--blush), var(--blush-deep));
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-photo-frame img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .photo-placeholder {
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--light-purple);
+    }
+    .photo-placeholder-icon { font-size: 3rem; }
+    .photo-placeholder-text {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+      padding: 0 24px;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--plum);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+    .about-badge-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--gold);
+    }
+    .about-badge-label { font-size: 0.72rem; color: rgba(255,255,255,0.7); margin-top: 4px; }
+    .about-content .btn { margin-top: 28px; }
+    blockquote {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--plum);
+      line-height: 1.55;
+      border-left: 3px solid var(--blush-deep);
+      padding-left: 20px;
+      margin: 28px 0;
+    }
+
+    /* --- TOPICS --- */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .topic-card {
+      background: var(--warm-white);
+      border: 1px solid var(--blush-deep);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: all 0.25s ease;
+    }
+    .topic-card:hover {
+      border-color: var(--light-purple);
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+    .topic-icon {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .topic-card h4 { margin-bottom: 8px; font-size: 1rem; }
+    .topic-card p { font-size: 0.85rem; color: var(--muted); }
+
+    /* --- RECENT EPISODES SECTION --- */
+    .episodes-section { background: var(--blush); }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
+    }
+    #home-episodes { display: flex; flex-direction: column; gap: 16px; }
+
+    /* --- REVIEW STRIP --- */
+    .reviews-section { background: var(--plum); padding: var(--section-pad); }
+    .reviews-section .eyebrow { color: var(--blush-deep); }
+    .reviews-section h2 { color: #fff; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      backdrop-filter: blur(6px);
+    }
+    .review-card .stars { margin-bottom: 12px; }
+    .review-card p {
+      font-style: italic;
+      color: rgba(255,255,255,0.82);
+      font-size: 0.92rem;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+    .review-author {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--blush-deep);
+    }
+
+    /* --- LISTEN CTA STRIP --- */
+    .listen-strip {
+      background: var(--cream);
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .listen-strip h2 { margin-bottom: 12px; }
+    .listen-strip p { color: var(--muted); margin-bottom: 36px; }
+    .platform-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* --- NEWSLETTER STRIP --- */
+    .newsletter-strip {
+      background: linear-gradient(135deg, var(--plum), var(--mid-purple));
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .newsletter-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 50% 100%, rgba(149,117,205,0.3) 0%, transparent 65%);
+    }
+    .newsletter-strip .container { position: relative; max-width: 540px; }
+    .newsletter-strip .eyebrow { color: var(--blush-deep); justify-content: center; }
+    .newsletter-strip h2 { color: #fff; margin-bottom: 12px; }
+    .newsletter-strip p { color: rgba(255,255,255,0.72); margin-bottom: 32px; }
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px;
+      padding: 6px 6px 6px 20px;
+      backdrop-filter: blur(8px);
+    }
+    .newsletter-form input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: #fff;
+      min-width: 0;
+    }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,0.45); }
+    .newsletter-form button {
+      white-space: nowrap;
+      background: var(--gold);
+      color: var(--bark);
+      font-weight: 600;
+      font-size: 0.82rem;
+      padding: 11px 22px;
+      border-radius: 50px;
+      transition: all 0.2s;
+    }
+    .newsletter-form button:hover { opacity: 0.9; transform: scale(1.02); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .about-strip-inner { grid-template-columns: 1fr; }
+      .about-photo { max-width: 360px; margin: 0 auto; }
+      .about-badge { right: 0; }
+      .topics-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 100px 16px 60px; }
+      .hero h1 { font-size: 2.4rem; }
+      .hero-stats { gap: 24px; }
+      .topics-grid { grid-template-columns: 1fr; }
+      .section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .newsletter-form { flex-direction: column; border-radius: var(--radius-lg); padding: 16px; }
+      .newsletter-form button { width: 100%; padding: 14px; text-align: center; border-radius: var(--radius); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Carrying It All <span>Mama</span></a>
+    <div class="nav-links" role="list">
+      <a href="index.html" role="listitem">Home</a>
+      <a href="about.html" role="listitem">About</a>
+      <a href="episodes.html" role="listitem">Episodes</a>
+      <a href="listen.html" role="listitem">Listen</a>
+      <a href="community.html" role="listitem">Community</a>
+      <a href="contact.html" role="listitem">Contact</a>
+    </div>
+    <a href="listen.html" class="btn btn-primary nav-cta">Listen Now</a>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="episodes.html">Episodes</a>
+  <a href="listen.html">Listen</a>
+  <a href="community.html">Community</a>
+  <a href="contact.html">Contact</a>
+  <a href="listen.html" class="btn btn-primary" style="text-align:center; margin-top:8px;">Listen Now</a>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span>New episodes every week</span>
+    <span>Honest conversations about motherhood</span>
+    <span>Pregnancy · Birth · Postpartum</span>
+    <span>Real talk, real moms</span>
+    <span>Subscribe and never miss an episode</span>
+    <span>Available on Spotify &amp; Apple Podcasts</span>
+    <span>New episodes every week</span>
+    <span>Honest conversations about motherhood</span>
+    <span>Pregnancy · Birth · Postpartum</span>
+    <span>Real talk, real moms</span>
+    <span>Subscribe and never miss an episode</span>
+    <span>Available on Spotify &amp; Apple Podcasts</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        The Honest Podcast for Every Season of Motherhood
+      </div>
+      <h1 id="hero-heading">
+        Carrying It All<br><em>Mama</em>
+      </h1>
+      <p class="hero-tagline">
+        Real conversations about pregnancy, birth, postpartum, and everything in between. No filters. No perfect answers. Just honesty.
+      </p>
+      <div class="hero-actions">
+        <a href="listen.html" class="btn btn-primary">Listen Now</a>
+        <a href="episodes.html" class="btn btn-ghost">Browse Episodes</a>
+        <a href="https://www.instagram.com/carryingitallmama" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="Follow on Instagram" style="gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="white" stroke-width="2" fill="none"/>
+            <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="2" fill="none"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
+          </svg>
+          Instagram
+        </a>
+        <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="Follow on TikTok" style="gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/>
+          </svg>
+          TikTok
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">Weekly</div>
+          <div class="hero-stat-label">New Episodes</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">5★</div>
+          <div class="hero-stat-label">Listener Rating</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">All</div>
+          <div class="hero-stat-label">Major Platforms</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-card" aria-hidden="true">
+      <div class="hero-cover" style="position:relative;">
+        <!-- Replace with actual cover art: <img src="images/podcast-cover.jpg" alt="Carrying It All Podcast Cover"> -->
+        <div class="cover-placeholder">
+          <span class="cover-placeholder-icon">🎙</span>
+          <div class="cover-placeholder-title">Carrying It All</div>
+          <div class="cover-placeholder-sub">The Podcast</div>
+        </div>
+        <div class="hero-card-badge">
+          <span class="new-dot"></span>
+          New episode this week
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<section class="about-strip" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-strip-inner">
+      <div class="about-photo reveal">
+        <div class="about-photo-frame">
+          <img src="quinn-photo.jpg" alt="Quinn Ouellette — host of Carrying It All, 27 weeks pregnant">
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-num">100%</div>
+          <div class="about-badge-label">Real &amp; Honest</div>
+        </div>
+      </div>
+
+      <div class="about-content reveal reveal-delay-2">
+        <span class="eyebrow">Meet Your Host</span>
+        <h2 id="about-heading">Quinn Ouellette</h2>
+        <blockquote>
+          "This didn't come from a place of strength. It came from survival — from the sleepless nights, the exhaustion that sleep doesn't fix, and the quiet of asking why no one says this out loud."
+        </blockquote>
+        <p style="color: var(--muted);">
+          27 weeks pregnant, mama to a toddler, and carrying it all in real time. Quinn started this podcast because those conversations needed to happen — the ones about what motherhood actually feels like when no one is watching.
+        </p>
+        <a href="about.html" class="btn btn-outline">Our Story →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPICS -->
+<section aria-labelledby="topics-heading" style="background: var(--warm-white);">
+  <div class="container">
+    <div style="text-align: center; max-width: 560px; margin: 0 auto 0;">
+      <span class="eyebrow reveal">What We Cover</span>
+      <h2 id="topics-heading" class="reveal reveal-delay-1">Conversations That Actually Matter</h2>
+    </div>
+    <div class="topics-grid" role="list">
+      <div class="topic-card reveal" role="listitem">
+        <span class="topic-icon">🤰</span>
+        <h4>Pregnancy</h4>
+        <p>The emotions nobody warns you about. The body changes. The fear. The wonder.</p>
+      </div>
+      <div class="topic-card reveal reveal-delay-1" role="listitem">
+        <span class="topic-icon">🌿</span>
+        <h4>Natural Birth</h4>
+        <p>Informed choices, birth planning, what to expect, and stories from real moms.</p>
+      </div>
+      <div class="topic-card reveal reveal-delay-2" role="listitem">
+        <span class="topic-icon">💜</span>
+        <h4>Mental Health</h4>
+        <p>Anxiety, overwhelm, identity shifts, and finding yourself again.</p>
+      </div>
+      <div class="topic-card reveal reveal-delay-1" role="listitem">
+        <span class="topic-icon">💑</span>
+        <h4>Relationships</h4>
+        <p>How pregnancy and motherhood reshape your partnerships and your sense of self.</p>
+      </div>
+      <div class="topic-card reveal reveal-delay-2" role="listitem">
+        <span class="topic-icon">🌙</span>
+        <h4>Postpartum</h4>
+        <p>The season nobody prepares you for. We talk about it honestly.</p>
+      </div>
+      <div class="topic-card reveal reveal-delay-3" role="listitem">
+        <span class="topic-icon">👩‍👧</span>
+        <h4>Motherhood</h4>
+        <p>Every season. Every age. The identity, the love, the exhaustion, the beauty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENT EPISODES -->
+<section class="episodes-section" aria-labelledby="recent-episodes-heading">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow">Latest</span>
+        <h2 id="recent-episodes-heading">Recent Episodes</h2>
+      </div>
+      <a href="episodes.html" class="btn btn-outline">All Episodes →</a>
+    </div>
+    <div id="home-episodes" aria-live="polite" aria-label="Recent podcast episodes">
+      <article class="episode-card reveal visible">
+        <div class="episode-thumb">
+          <span>🎙</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-num">Episode 2 · 36 min 50 sec</div>
+          <h3 class="episode-title">Sleep training didn't work — An honest conversation about baby sleep</h3>
+          <p class="episode-desc">Most moms know the exhaustion of sleepless nights — but what if your child's sleep struggles have been going on for over a year and a half? Quinn's raw, relatable story of surviving 17 months of broken sleep exposes the harsh reality of motherhood and the chaos sleep deprivation can bring.</p>
+          <div class="episode-meta">
+            <span class="episode-date">📅 March 27, 2026</span>
+          </div>
+        </div>
+        <a href="https://open.spotify.com/episode/2PtQcGLxib31Z3BETctI2k" target="_blank" rel="noopener" class="episode-play" aria-label="Listen on Spotify">▶</a>
+      </article>
+      <article class="episode-card reveal visible">
+        <div class="episode-thumb">
+          <span>🎙</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-num">Episode 1 · 30 min 52 sec</div>
+          <h3 class="episode-title">Why I'm Here: The story behind Carrying it All Mama</h3>
+          <p class="episode-desc">In the very first episode of Carrying It All Mama, I'm telling you exactly why I started this show. The losses. The sleepless nights. The moment I realized someone needed to say this out loud. If you've ever felt completely alone in the hard parts of motherhood — hi. You found your people.</p>
+          <div class="episode-meta">
+            <span class="episode-date">📅 March 27, 2026</span>
+          </div>
+        </div>
+        <a href="https://open.spotify.com/episode/17OZVLKWfbS1VKJbv4jJGF" target="_blank" rel="noopener" class="episode-play" aria-label="Listen on Spotify">▶</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" aria-labelledby="reviews-heading">
+  <div class="container">
+    <div style="text-align: center;">
+      <span class="eyebrow">Listener Love</span>
+      <h2 id="reviews-heading" class="reveal">What Mamas Are Saying</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"This podcast made me feel seen for the first time in my pregnancy. Like someone finally said out loud what I've been feeling."</p>
+        <div class="review-author">— Apple Podcasts Listener</div>
+      </div>
+      <div class="review-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p>"I listen during my morning walks and I always arrive home feeling less alone. This podcast is a gift to every mother."</p>
+        <div class="review-author">— Spotify Listener</div>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p>"Finally — an honest voice. No toxic positivity, no pretending it's all beautiful all the time. Real. Raw. And so necessary."</p>
+        <div class="review-author">— Community Member</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTEN ON PLATFORMS -->
+<section class="listen-strip" aria-labelledby="listen-heading">
+  <div class="container">
+    <span class="eyebrow reveal" style="justify-content: center;">Find Us Everywhere</span>
+    <h2 id="listen-heading" class="reveal reveal-delay-1">Listen on Your Favourite App</h2>
+    <p class="reveal reveal-delay-2">Available on every major podcast platform. Subscribe so you never miss an episode.</p>
+    <div class="platform-row reveal reveal-delay-3">
+      <a href="https://podcasts.apple.com/us/podcast/carrying-it-all-mama/id1888526387" class="platform-btn" target="_blank" rel="noopener">
+        <div class="platform-icon" style="background:#f7f7f7;">🍎</div>
+        <span>Apple Podcasts</span>
+      </a>
+      <a href="https://podcasts.apple.com/us/podcast/carrying-it-all-mama/id1888526387" class="platform-btn" target="_blank" rel="noopener">
+        <div class="platform-icon" style="background:#1db954; color:#fff;">🎵</div>
+        <span>Spotify</span>
+      </a>
+      <a href="https://podcasts.apple.com/us/podcast/carrying-it-all-mama/id1888526387" class="platform-btn" target="_blank" rel="noopener">
+        <div class="platform-icon" style="background:#ff9900; color:#fff;">📻</div>
+        <span>Amazon Music</span>
+      </a>
+      <a href="https://podcasts.apple.com/us/podcast/carrying-it-all-mama/id1888526387" class="platform-btn" target="_blank" rel="noopener">
+        <div class="platform-icon" style="background:#cc0000; color:#fff;">▶</div>
+        <span>YouTube</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-strip" aria-labelledby="newsletter-heading">
+  <div class="container">
+    <span class="eyebrow">Stay Connected</span>
+    <h2 id="newsletter-heading">Never Miss an Episode</h2>
+    <p>Subscribe on your favourite platform and join the community for honest conversations about motherhood.</p>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px;">
+      <a href="https://podcasts.apple.com/us/podcast/carrying-it-all-mama/id1888526387" target="_blank" rel="noopener" class="btn" style="background:var(--gold); color:var(--bark); font-weight:600;">Listen on Apple Podcasts</a>
+      <a href="https://open.spotify.com/show/461IUrirqji687MBaxvlhm" target="_blank" rel="noopener" class="btn btn-ghost">Listen on Spotify</a>
+    </div>
+    <p style="color:rgba(255,255,255,0.4); font-size:0.75rem; margin-top:14px;">New episodes every week.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">Carrying It All <span>Mama</span></div>
+      <p>Carrying It All Mama — The honest podcast for every season of motherhood. Real conversations about pregnancy, birth, and what comes after.</p>
+      <div class="footer-social" aria-label="Social media links">
+        <a href="https://www.instagram.com/carryingitallmama" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+        <a href="listen.html" aria-label="Spotify">🎙</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="listen.html">Listen</a>
+      <a href="community.html">Community</a>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/carryingitallmama" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener">TikTok</a>
+      <a href="/cdn-cgi/l/email-protection#a0c8c5cccccfe0c3c1d2d2d9c9cec7c9d4c1cccccdc1cdc18ec3cfcd"><span class="__cf_email__" data-cfemail="dab2bfb6b6b59ab9bba8a8a3b3b4bdb3aebbb6b6b7bbb7bbf4b9b5b7">[email&#160;protected]</span></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Carrying It All Mama. All rights reserved.</span>
+    <span>carryingitallmama.com</span>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
+<script>
+  // Set current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Load recent episodes (limit 4)
+  window.CarryingItAll.loadEpisodes('home-episodes', 4);
+
+  // Newsletter form (replace with Mailchimp/ConvertKit embed or action URL)
+  document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+    e.preventDef
