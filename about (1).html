@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Carrying It All Mama | Honest Pregnancy &amp; Motherhood Podcast</title>
+  <meta name="description" content="Meet the host of Carrying It All — a real mom, currently pregnant, talking honestly about every season of motherhood.">
+  <meta property="og:title" content="About — Carrying It All Mama | Honest Pregnancy &amp; Motherhood Podcast">
+  <meta property="og:description" content="Meet the host of Carrying It All — a real mom talking honestly about every season of motherhood.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carryingitallmama.com/about.html">
+  <meta property="og:image" content="https://carryingitallmama.com/images/og-image.jpg">
+  <link rel="canonical" href="https://carryingitallmama.com/about.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- STRUCTURED DATA — About page with FAQ schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://carryingitallmama.com/about.html#webpage",
+        "url": "https://carryingitallmama.com/about.html",
+        "name": "About — Carrying It All | Honest Pregnancy & Motherhood Podcast",
+        "description": "Meet Quinn Ouellette — host of Carrying It All, 27 weeks pregnant and mama to a toddler. Quinn started this podcast from survival, not strength, to have the honest conversations about motherhood that nobody says out loud.",
+        "isPartOf": { "@id": "https://carryingitallmama.com/#website" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carryingitallmama.com/" },
+            { "@type": "ListItem", "position": 2, "name": "About", "item": "https://carryingitallmama.com/about.html" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Carrying It All podcast about?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Carrying It All is an honest podcast for every season of motherhood. It covers real conversations about pregnancy emotions, natural birth, postpartum mental health, relationships, and the identity shift that comes with becoming a mother. New episodes drop every week."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I listen to Carrying It All?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Carrying It All is available on Apple Podcasts, Spotify, Amazon Music, iHeart Radio, YouTube, and all major podcast platforms. Visit carryingitallmama.com/listen for all links."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often does Carrying It All release new episodes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "New episodes of Carrying It All are released every week. Subscribe on your favourite podcast platform so you never miss one."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact Carrying It All for collaborations or sponsorships?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach the Carrying It All team at hello@carryingitallmama.com or through the contact form at carryingitallmama.com/contact. We welcome brand collaborations, sponsorship inquiries, and guest pitches."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
+  <style>
+    .about-main {
+      background: var(--warm-white);
+      padding: var(--section-pad);
+    }
+    .about-main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about-sidebar { position: sticky; top: 100px; }
+    .about-main-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, var(--blush), var(--blush-deep));
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      color: var(--light-purple);
+    }
+    .about-main-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .about-main-photo-icon { font-size: 3rem; }
+    .about-main-photo-text { font-size: 0.8rem; color: var(--muted); text-align: center; padding: 0 24px; }
+
+    .about-details {
+      background: var(--blush);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .about-detail {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--blush-deep);
+      font-size: 0.88rem;
+    }
+    .about-detail:last-child { border: none; }
+    .about-detail-icon { font-size: 1rem; flex-shrink: 0; }
+    .about-detail-label { color: var(--muted); font-size: 0.75rem; display: block; margin-bottom: 2px; }
+    .about-detail-value { color: var(--bark); font-weight: 500; }
+
+    .about-body h3 { margin: 36px 0 14px; }
+    .about-body p { color: var(--muted); margin-bottom: 18px; line-height: 1.8; }
+    .about-body blockquote {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--plum);
+      border-left: 3px solid var(--blush-deep);
+      padding: 8px 0 8px 24px;
+      margin: 32px 0;
+      line-height: 1.5;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .value-item {
+      background: var(--blush);
+      border-radius: var(--radius);
+      padding: 20px;
+      border: 1px solid var(--blush-deep);
+    }
+    .value-item h4 { font-size: 0.95rem; margin-bottom: 6px; }
+    .value-item p { font-size: 0.82rem; color: var(--muted); margin: 0; }
+
+    .about-cta-strip {
+      background: var(--plum);
+      padding: 72px 24px;
+      text-align: center;
+      color: #fff;
+    }
+    .about-cta-strip h2 { color: #fff; margin-bottom: 12px; }
+    .about-cta-strip p { color: rgba(255,255,255,0.7); margin-bottom: 28px; }
+    .about-cta-strip .btn + .btn { margin-left: 12px; }
+
+    @media (max-width: 900px) {
+      .about-main-grid { grid-template-columns: 1fr; }
+      .about-sidebar { position: static; max-width: 400px; margin: 0 auto; }
+      .about-main-photo { aspect-ratio: 4/3; }
+    }
+    @media (max-width: 600px) {
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Carrying It All <span>Mama</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="listen.html">Listen</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="listen.html" class="btn btn-primary nav-cta">Listen Now</a>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="episodes.html">Episodes</a>
+  <a href="listen.html">Listen</a>
+  <a href="community.html">Community</a>
+  <a href="contact.html">Contact</a>
+  <a href="listen.html" class="btn btn-primary" style="text-align:center;margin-top:8px;">Listen Now</a>
+</div>
+
+<div class="page-hero" role="banner">
+  <div class="container">
+    <span class="eyebrow">Our Story</span>
+    <h1>About Carrying It All</h1>
+    <p>A podcast born from the conversations that needed to happen.</p>
+  </div>
+</div>
+
+<section class="about-main">
+  <div class="container">
+    <div class="about-main-grid">
+
+      <div class="about-sidebar reveal">
+        <div class="about-main-photo">
+          <img src="quinn-photo.jpg" alt="Quinn Ouellette — host of Carrying It All podcast, 27 weeks pregnant">
+        </div>
+        <div class="about-details">
+          <div class="about-detail">
+            <span class="about-detail-icon">🎙</span>
+            <div>
+              <span class="about-detail-label">Host</span>
+              <span class="about-detail-value">Quinn Ouellette</span>
+            </div>
+          </div>
+          <div class="about-detail">
+            <span class="about-detail-icon">🤰</span>
+            <div>
+              <span class="about-detail-label">Currently</span>
+              <span class="about-detail-value">27 weeks pregnant & mama to a toddler</span>
+            </div>
+          </div>
+          <div class="about-detail">
+            <span class="about-detail-icon">📅</span>
+            <div>
+              <span class="about-detail-label">Episodes</span>
+              <span class="about-detail-value">Weekly, every week</span>
+            </div>
+          </div>
+          <div class="about-detail">
+            <span class="about-detail-icon">📧</span>
+            <div>
+              <span class="about-detail-label">Email</span>
+              <span class="about-detail-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="78101d141417381b190a0a0111161f110c19141415191519561b1715">[email&#160;protected]</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-body reveal reveal-delay-2">
+        <span class="eyebrow">Who I Am</span>
+        <h2>This Didn't Come From Strength. It Came From Survival.</h2>
+
+        <blockquote>
+          "I'm 27 weeks pregnant… and still feel like I'm barely holding it all together."
+        </blockquote>
+
+        <p>
+          Hi, I'm Quinn. And I want to start with the truth — because that's what this whole thing is built on.
+        </p>
+
+        <p>
+          This podcast didn't come from a place of having it figured out. It came from the sleepless nights sitting in the dark, holding my baby while silently crying so no one would hear me. From a kind of exhaustion that sleep doesn't fix — the kind that lives in your body, your mind, your soul.
+        </p>
+
+        <p>
+          And now I'm doing it all while growing another life inside me. Carrying a baby in my arms and one in my body, and still feeling like I'm barely holding myself together some days. Watching my toddler grow right in front of me while I feel myself changing, stretching, and sometimes breaking in ways no one talks about.
+        </p>
+
+        <h3>Why I Had to Say It Out Loud</h3>
+        <p>
+          Trying to be everything while feeling like you're disappearing at the same time — that's real. And I kept asking myself: "Why does this feel so hard? Why does no one say this out loud?"
+        </p>
+        <p>
+          So I will. Motherhood is beautiful. But it's also heavy. And both can be true at the same time.
+        </p>
+        <p>
+          Carrying It All was built in these moments — the tears, the exhaustion, the quiet strength it takes to keep showing up. My husband kept telling me I needed to share this. And he was right.
+        </p>
+
+        <h3>If This Feels Like You</h3>
+        <div class="values-grid">
+          <div class="value-item">
+            <h4>🤍 You're Not Alone</h4>
+            <p>Whatever you're feeling in the dark at 3am — someone else has been there. This podcast is the proof.</p>
+          </div>
+          <div class="value-item">
+            <h4>🌿 Honest Over Perfect</h4>
+            <p>No highlight reels here. Just real conversations about what motherhood actually feels like.</p>
+          </div>
+          <div class="value-item">
+            <h4>💜 Both Can Be True</h4>
+            <p>Motherhood is beautiful and heavy. We hold space for both, without apology.</p>
+          </div>
+          <div class="value-item">
+            <h4>🌱 Keep Showing Up</h4>
+            <p>This is for the mamas who are exhausted but still here. Still trying. Still carrying it all.</p>
+          </div>
+        </div>
+
+        <p style="margin-top: 28px;">
+          We're just getting started — and I'm so glad you're here. Follow along. We're going to talk about it.
+        </p>
+
+        <div style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="episodes.html" class="btn btn-primary">Start Listening →</a>
+          <a href="community.html" class="btn btn-outline">Join the Community</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-cta-strip">
+  <div class="container">
+    <span class="eyebrow" style="color: var(--blush-deep); justify-content: center;">Get in Touch</span>
+    <h2>Want to Collaborate or Be a Guest?</h2>
+    <p>We're always open to brand partnerships, sponsorship conversations, and guest pitch submissions.</p>
+    <a href="contact.html" class="btn btn-ghost">Reach Out →</a>
+    <a href="listen.html" class="btn" style="background:var(--gold); color: var(--bark); margin-left:12px;">Listen Now</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">Carrying It All <span>Mama</span></div>
+      <p>Carrying It All Mama — The honest podcast for every season of motherhood.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/carryingitallmama" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+        <a href="listen.html" aria-label="Podcast">🎙</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="listen.html">Listen</a>
+      <a href="community.html">Community</a>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/carryingitallmama" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener">TikTok</a>
+      <a href="/cdn-cgi/l/email-protection#a6cec3cacac9e6c5c7d4d4dfcfc8c1cfd2c7cacacbc7cbc788c5c9cb"><span class="__cf_email__" data-cfemail="dfb7bab3b3b09fbcbeadada6b6b1b8b6abbeb3b3b2beb2bef1bcb0b2">[email&#160;protected]</span></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+  
