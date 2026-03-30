@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community — Carrying It All Mama | Join the Honest Motherhood Podcast</title>
+  <meta name="description" content="Join the Carrying It All community. Subscribe for weekly episodes and get your free Honest Pregnancy Journal Prompts download.">
+  <meta property="og:title" content="Community — Carrying It All Mama | Join the Honest Motherhood Podcast">
+  <meta property="og:description" content="Join the Carrying It All community. Get your free Honest Pregnancy Journal Prompts download.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carryingitallmama.com/community.html">
+  <meta property="og:image" content="https://carryingitallmama.com/images/og-image.jpg">
+  <link rel="canonical" href="https://carryingitallmama.com/community.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- STRUCTURED DATA — Community page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://carryingitallmama.com/community.html#webpage",
+        "url": "https://carryingitallmama.com/community.html",
+        "name": "Community — Carrying It All | Join the Honest Motherhood Podcast",
+        "description": "Join the Carrying It All community. Subscribe for weekly episodes and get your free Honest Pregnancy Journal Prompts download.",
+        "isPartOf": { "@id": "https://carryingitallmama.com/#website" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carryingitallmama.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Community", "item": "https://carryingitallmama.com/community.html" }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
+  <style>
+    .signup-section {
+      background: var(--warm-white);
+      padding: var(--section-pad);
+    }
+    .signup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .signup-visual {
+      background: linear-gradient(145deg, var(--blush), var(--blush-deep));
+      border-radius: var(--radius-lg);
+      padding: 48px 36px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .signup-visual::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: var(--light-purple);
+      opacity: 0.1;
+      border-radius: 50%;
+    }
+    .freebie-icon { font-size: 3.5rem; margin-bottom: 16px; display: block; }
+    .freebie-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--plum);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .freebie-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .freebie-items {
+      text-align: left;
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+    .freebie-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 0.88rem;
+      color: var(--bark);
+      border-bottom: 1px solid var(--blush-deep);
+    }
+    .freebie-item:last-child { border: none; }
+    .freebie-item-check { color: var(--gold); font-weight: 600; }
+
+    .signup-form-block h2 { margin-bottom: 12px; }
+    .signup-form-block > p { color: var(--muted); margin-bottom: 32px; }
+
+    /* Mailchimp/ConvertKit embed area */
+    .email-embed-area {
+      background: var(--blush);
+      border: 1.5px dashed var(--blush-deep);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .email-embed-area p { color: var(--muted); font-size: 0.85rem; margin: 0; }
+    .email-embed-area strong { color: var(--plum); }
+
+    /* Fallback form (shown if no embed yet) */
+    .fallback-signup-form { display: flex; flex-direction: column; gap: 14px; }
+    .fallback-signup-form .btn { width: 100%; justify-content: center; padding: 16px; font-size: 0.9rem; }
+
+    .social-section {
+      background: var(--blush);
+      padding: var(--section-pad);
+    }
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .social-card {
+      background: var(--warm-white);
+      border: 1.5px solid var(--blush-deep);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .social-card:hover {
+      border-color: var(--light-purple);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .social-card-icon { font-size: 2.5rem; }
+    .social-card h3 { font-size: 1.2rem; margin: 0; }
+    .social-card-handle { font-size: 0.82rem; color: var(--light-purple); font-weight: 500; }
+    .social-card p { font-size: 0.85rem; color: var(--muted); margin: 0; }
+    .social-card .btn { margin-top: 8px; width: 100%; justify-content: center; }
+
+    .perks-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .perk {
+      text-align: center;
+      padding: 28px 20px;
+      background: var(--warm-white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--blush-deep);
+    }
+    .perk-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+    .perk h4 { font-size: 1rem; margin-bottom: 8px; }
+    .perk p { font-size: 0.83rem; color: var(--muted); }
+
+    @media (max-width: 900px) {
+      .signup-grid { grid-template-columns: 1fr; gap: 40px; }
+      .social-grid { grid-template-columns: 1fr; }
+      .perks-list { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .perks-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Carrying It All <span>Mama</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="listen.html">Listen</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="listen.html" class="btn btn-primary nav-cta">Listen Now</a>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="episodes.html">Episodes</a>
+  <a href="listen.html">Listen</a>
+  <a href="community.html">Community</a>
+  <a href="contact.html">Contact</a>
+  <a href="listen.html" class="btn btn-primary" style="text-align:center;margin-top:8px;">Listen Now</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="eyebrow">You Belong Here</span>
+    <h1>Join the Community</h1>
+    <p>A space for every honest mama. Subscribe, connect, and never carry it alone.</p>
+  </div>
+</div>
+
+<!-- COMMUNITY SIGNUP -->
+<section class="signup-section" aria-labelledby="signup-heading">
+  <div class="container" style="max-width: 600px; text-align: center;">
+    <span class="eyebrow" style="justify-content: center;">Stay in the Loop</span>
+    <h2 id="signup-heading">Never Miss an Episode</h2>
+    <p style="color: var(--muted); margin-bottom: 32px;">Subscribe on your favourite platform and follow along on social media for honest daily conversations about motherhood.</p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px;">
+      <a href="https://podcasts.apple.com/us/podcast/carrying-it-all-mama/id1888526387" target="_blank" rel="noopener" class="btn btn-primary">🍎 Apple Podcasts</a>
+      <a href="https://open.spotify.com/show/461IUrirqji687MBaxvlhm" target="_blank" rel="noopener" class="btn btn-outline">🎵 Spotify</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section style="background: var(--cream); padding: var(--section-pad);">
+  <div class="container">
+    <div style="text-align: center; max-width: 520px; margin: 0 auto 0;">
+      <span class="eyebrow reveal" style="justify-content: center;">Community Perks</span>
+      <h2 class="reveal reveal-delay-1">Everything You Get When You Subscribe</h2>
+    </div>
+    <div class="perks-list">
+      <div class="perk reveal">
+        <span class="perk-icon">🎙</span>
+        <h4>New Episodes Weekly</h4>
+        <p>Honest conversations about pregnancy, motherhood, and everything in between — every week.</p>
+      </div>
+      <div class="perk reveal reveal-delay-1">
+        <span class="perk-icon">🤍</span>
+        <h4>Real Talk</h4>
+        <p>No filters, no highlight reels. Just the truth about what motherhood actually feels like.</p>
+      </div>
+      <div class="perk reveal reveal-delay-2">
+        <span class="perk-icon">👩‍👧</span>
+        <h4>You're Not Alone</h4>
+        <p>A community of mamas who get it — follow along on Instagram and TikTok for daily connection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL LINKS -->
+<section class="social-section" aria-labelledby="social-heading">
+  <div class="container">
+    <div style="text-align: center;">
+      <span class="eyebrow reveal" style="justify-content: center;">Find Us on Social</span>
+      <h2 id="social-heading" class="reveal reveal-delay-1">Connect Every Day</h2>
+    </div>
+    <div class="social-grid">
+      <a href="https://www.instagram.com/carryingitallmama" target="_blank" rel="noopener" class="social-card reveal" aria-label="Follow Carrying It All on Instagram">
+        <span class="social-card-icon">📷</span>
+        <h3>Instagram</h3>
+        <div class="social-card-handle">@carryingitallmama</div>
+        <p>Daily honest moments, episode clips, and community shares.</p>
+        <span class="btn btn-outline">Follow →</span>
+      </a>
+      <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener" class="social-card reveal reveal-delay-1" aria-label="Follow Carrying It All on TikTok">
+        <span class="social-card-icon">🎵</span>
+        <h3>TikTok</h3>
+        <div class="social-card-handle">@carryingitallmama</div>
+        <p>Short clips, honest takes, and the real moments between episodes.</p>
+        <span class="btn btn-outline">Follow →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">Carrying It All <span>Mama</span></div>
+      <p>Carrying It All Mama — The honest podcast for every season of motherhood.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/carryingitallmama" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+        <a href="listen.html" aria-label="Podcast">🎙</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="listen.html">Listen</a>
+      <a href="community.html">Community</a>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/carryingitallmama" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@carryingitallmama" target="_blank" rel="noopener">TikTok</a>
+      <a href="/cdn-cgi/l/email-protection#ed8588818182ad8e8c9f9f9484838a84998c8181808c808cc38e8280"><span class="__cf_email__" data-cfemail="046c6168686b44676576767d6d6a636d70656868696569652a676b69">[email&#160;protected]</span></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Carrying It All Mama. All rights reserved.</span>
+    <span>carryingitallmama.com</span>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.getElementById('community-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // TODO: Replace with your Mailchimp/ConvertKit embed code
+    // This is just a placeholder —
